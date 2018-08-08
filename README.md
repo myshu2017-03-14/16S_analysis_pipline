@@ -41,9 +41,20 @@ Then generate the biom table and tree
 
 `nohup 1-otu_analysis/usearch2.sh usearch_out_0.97_output`
 
-> #### 
+The results includes below files:
+	derep.fasta
+	otu_map.uc
+	otu_reps.fa
+	otu_reps.init.fasta
+	otus.fa
+	`otu_table.biom`
+	otu_table.txt
+	`rep_set.tre`
+	seq_otus.txt
+	sorted.fasta
 
-> #### 
+
+
 
 ## Alpha diversity analysis
 
