@@ -61,7 +61,6 @@ The results includes below files:
 `2-otu_analysis/R-specaccum_cur.sh otu_table.biom R-specaccum_plot.pdf` and the plots just like below:
 ![specaccum_cur](images/specaccum_cur.jpg)
 
-
 ## Taxa classification and abundance analysis
 > #### barplots of taxa
 
