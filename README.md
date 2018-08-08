@@ -47,9 +47,9 @@ The results includes below files:
 	otu_reps.fa
 	otu_reps.init.fasta
 	otus.fa
-	`otu_table.biom`
+	otu_table.biom
 	otu_table.txt
-	`rep_set.tre`
+	rep_set.tre
 	seq_otus.txt
 	sorted.fasta
 
