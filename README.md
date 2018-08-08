@@ -33,35 +33,82 @@ We use mothur to filter our data. The command just as below:
 `mothur 1-filter/filter.sh > mothur.log`
 
 ## OTU analysis (Usearch)
+> #### Usearch analysis
 First, get the OTUs seqs and re-map raw data to OTUs.
 
-`nohup 1-otu_analysis/usearch.sh usearch_out_0.97_output 0.97 combined_fasta/combined_seqs.fna &`
+`nohup 2-otu_analysis/usearch.sh usearch_out_0.97_output 0.97 combined_fasta/combined_seqs.fna &`
 
 Then generate the biom table and tree
 
-`nohup 1-otu_analysis/usearch2.sh usearch_out_0.97_output`
+`nohup 2-otu_analysis/usearch2.sh usearch_out_0.97_output`
 
 The results includes below files:
 + derep.fasta
 + otu_map.uc
 + otu_reps.fa
-	otu_reps.init.fasta
-	otus.fa
-	otu_table.biom
-	otu_table.txt
-	rep_set.tre
-	seq_otus.txt
-	sorted.fasta
++ otu_reps.init.fasta
++ otus.fa
++ otu_table.biom
++ otu_table.txt
++ rep_set.tre
++ seq_otus.txt
++ sorted.fasta
 
+其中otu_table.biom和rep_set.tre可以用于下游分析
 
+> #### OTU specaccum cur analysis
 
+## Taxa classification and abundance analysis
+> #### barplots of taxa
+
+> #### heatmap of taxa and samples
+
+> ####  Rank Abundance plots
+
+> #### Tree of samples
 
 ## Alpha diversity analysis
+> #### Alpha rarefaction analysis (QIIME)
+
+`3-alpha_analysis/alpha_div.sh otu_table.biom mapping_file.txt rep_set.tre alpha_plots_921_10 921`
+
+> #### compare alpha diversity analysis (QIIME and R)
+Note that you should run alpha rarefaction analysis first. The input dir `alpha_div_collated/` is from  alpha rarefaction analysis results.
+
+`3-alpha_analysis/R_alpha_div/R_alpha_div.sh alpha_div_collated/ mapping_file.txt Type Alpha_out mapping_file_for_R.txt`
+
+`Type` is one of the header of map file.
 
 ## Beta diversity analysis
 
-## Comparative analysis
+> #### Anosim analysis
 
+> #### MRPP analysis
+
+> #### PCoA analysis (QIIME or R)
+
+> #### PCA analysis
+
+> #### NMDS analysis
+
+> #### UPGMA analysis
+UPGMA tree and barplots
+
+## Comparative analysis
+> #### Lefse analysis
+> #### STAMP analysis
+> #### R stats analysis
+> #### Spearman correlation coefficient analysis of dominant taxa
 
 ## Predict metagenome with 16S data using Picrust
+
+> #### pick_closed_reference_otus using gg_13_5 database (QIIME)
+
+> #### predict metagenome
+
+> #### metagenome contributions analysis (for select KO or modules)
+
+> #### 
+
+
 
