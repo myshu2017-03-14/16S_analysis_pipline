@@ -14,7 +14,7 @@ The seq_counts.txt just as below:
 
 ![seq_couns_results](images/seq_counts_results.png)
 
-> #### Prepare map file 
+> #### Prepare map file and generate combined_fasta.fna
 The mapping file format is a Manually edited tab file. You can edit it using excel or other text editor. More about this file's format you can read from this [link](http://qiime.org/documentation/file_formats.html#metadata-mapping-files). My example `mapping_file.txt` just as below:(The  `InputFileName` must be the same as each samples seq file name. )
 ![map_file_example](images/map_file_example.png)
 
@@ -25,9 +25,10 @@ Then we need to generate a `combined_fasta.fna` for all the samples.
 
 Finally, we will get a `combined_fasta/combined_fasta.fna` for the Data filtering.
 
-> #### Data filtering for Full length 16S rRNA from Pacbio sequencing (Note: the filter criterion may be different for different data)
+> #### Data filtering for Full length 16S rRNA from Pacbio sequencing 
+(Note: the filter criterion may be different for different data)
 We use mothur to filter our data. The command just as below:
-`mothur filter.sh`
+`mothur 1-filter/filter.sh > mothur.log`
 
 ## OTU analysis
 
