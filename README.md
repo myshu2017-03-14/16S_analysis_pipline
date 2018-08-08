@@ -42,9 +42,9 @@ Then generate the biom table and tree
 `nohup 1-otu_analysis/usearch2.sh usearch_out_0.97_output`
 
 The results includes below files:
-	derep.fasta
-	otu_map.uc
-	otu_reps.fa
++ derep.fasta
++ otu_map.uc
++ otu_reps.fa
 	otu_reps.init.fasta
 	otus.fa
 	otu_table.biom
