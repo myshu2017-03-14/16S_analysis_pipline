@@ -26,5 +26,5 @@ map=$2
 tree=$3
 out=$4
 even=$5
-
-alpha_rarefaction.py -i $otu_table -m $map -t $tree -o $out -e $even -n 10 -f -p /analysis/software_han/software/Tools/myshu_scripts/16S_analysis/qiime_para_txt/para_alpha_div.txt
+pro=$(dirname $0)
+alpha_rarefaction.py -i $otu_table -m $map -t $tree -o $out -e $even -n 10 -f -p $pro/para_alpha_div.txt
