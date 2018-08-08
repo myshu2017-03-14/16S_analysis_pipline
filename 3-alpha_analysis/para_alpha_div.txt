@@ -1,2 +1,1 @@
 alpha_diversity:metrics observed_species,shannon,chao1,PD_whole_tree,observed_otus,simpson,goods_coverage
-beta_diversity:metrics  bray_curtis,unweighted_unifrac,weighted_unifrac
