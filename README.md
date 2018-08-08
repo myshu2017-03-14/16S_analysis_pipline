@@ -2,7 +2,7 @@
 16S rRNA analysis pipline
 
 Contents
-[Data filtering and pre-proccessing](#anchor)
+[Alpha diversity analysis](#anchor)
 
 
 
