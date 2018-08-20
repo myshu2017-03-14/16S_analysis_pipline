@@ -1,8 +1,14 @@
 #!/usr/bin/Rscript
 library(getopt)
+#---------------------------------------------------------------+
+#     author: Myshu                                             
+#     mail:1291016966@qq.com                                    
+#     version:1.0                                               
+#     date :2018-6-13
+#     description: plot taxa bar plots for otu_table
+#---------------------------------------------------------------+
 # get options, using the spec as defined by the enclosed list.
 # we read the options from the default: commandArgs(TRUE).
-# 一般就是4列，第一列为字符串，第二列为简写，第三列值分别为0（无参数后面可以不跟参数）、1（后面需要跟参数）、2（可选可不选），第四列为数据类型
 # character logical integer double
 spec = matrix(c(
   'input_table_file', 'i', 1, "character",
