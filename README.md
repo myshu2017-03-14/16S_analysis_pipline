@@ -2,7 +2,7 @@
 16S rRNA analysis pipline
 
 Contents
-[Alpha diversity analysis](#anchor)
+Alpha diversity analysis
 
 
 
