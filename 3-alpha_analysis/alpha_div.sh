@@ -12,9 +12,9 @@ cat <<HELP
      Date: 2018-6-1
      Description: Plots alpha rarefaction plots
 ---------------------------------------------------------------
-USAGE: $0 otu_table mapping_file tree_file output_dir even
+USAGE: $0 otu_table mapping_file output_dir even tree_file
     or $0 ‐h # show this message
-EXAMPLE: otu_table_even_921.biom mapping_file.txt rep_set.tre alpha_plots_921_10 921
+EXAMPLE: otu_table_even_921.biom mapping_file.txt alpha_plots_921_10 921 rep_set.tre
     $0 
 HELP
 exit 0
@@ -23,8 +23,14 @@ exit 0
 [ "$1" = "-h" ] && help
 otu_table=$1
 map=$2
-tree=$3
-out=$4
-even=$5
-pro=$(dirname $0)
-alpha_rarefaction.py -i $otu_table -m $map -t $tree -o $out -e $even -n 10 -f -p $pro/para_alpha_div.txt
+out=$3
+even=$4
+tree=$5
+echo $tree
+if [ x$5 = x  ] ;then
+	alpha_rarefaction.py -i $otu_table -m $map -o $out -e $even -n 10 -f -p /analysis/software_han/software/Tools/myshu_scripts/16S_analysis/qiime_para_txt/para_alpha_div_notree.txt
+
+else
+	alpha_rarefaction.py -i $otu_table -m $map -t $tree -o $out -e $even -n 10 -f -p /analysis/software_han/software/Tools/myshu_scripts/16S_analysis/qiime_para_txt/para_alpha_div.txt
+
+fi
