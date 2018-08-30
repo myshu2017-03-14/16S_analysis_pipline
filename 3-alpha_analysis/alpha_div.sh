@@ -26,7 +26,7 @@ map=$2
 out=$3
 even=$4
 tree=$5
-echo $tree
+#echo $tree
 if [ x$5 = x  ] ;then
 	alpha_rarefaction.py -i $otu_table -m $map -o $out -e $even -n 10 -f -p /analysis/software_han/software/Tools/myshu_scripts/16S_analysis/qiime_para_txt/para_alpha_div_notree.txt
 
