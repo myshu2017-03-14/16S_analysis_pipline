@@ -27,10 +27,11 @@ out=$3
 even=$4
 tree=$5
 #echo $tree
+pro=$(dirname $0)
 if [ x$5 = x  ] ;then
-	alpha_rarefaction.py -i $otu_table -m $map -o $out -e $even -n 10 -f -p /analysis/software_han/software/Tools/myshu_scripts/16S_analysis/qiime_para_txt/para_alpha_div_notree.txt
+	alpha_rarefaction.py -i $otu_table -m $map -o $out -e $even -n 10 -f -p $pro/para_alpha_div_notree.txt
 
 else
-	alpha_rarefaction.py -i $otu_table -m $map -t $tree -o $out -e $even -n 10 -f -p /analysis/software_han/software/Tools/myshu_scripts/16S_analysis/qiime_para_txt/para_alpha_div.txt
+	alpha_rarefaction.py -i $otu_table -m $map -t $tree -o $out -e $even -n 10 -f -p $pro/para_alpha_div.txt
 
 fi
