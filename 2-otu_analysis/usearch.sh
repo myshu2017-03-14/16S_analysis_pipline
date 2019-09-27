@@ -5,7 +5,7 @@ help()
 cat <<HELP
 ---------------------------------------------------------------
      Author: Myshu                                            
-     Mail: 1291016966@qq.com                                   
+     Mail: myshu0601@qq.com                                   
      Version: 1.0                                              
      Date: 2018-8-8
      Description: OTU clustering and re-map raw data to OTUs
